@@ -5,7 +5,9 @@
   "author": "jota.montecino@gmail.com",
   "scripts": {
     "start": "node index.js",
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "lint": "./node_modules//eslint/bin/eslint.js lib/**",
+    "lint-fix": "./node_modules//eslint/bin/eslint.js --fix lib/**"
   },
   "license": "MIT",
   "dependencies": {
@@ -15,5 +17,17 @@
     "fastify-plugin": "^3.0.1",
     "jaeger-client": "^3.19.0",
     "nodemon": "^2.0.16"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/trashnochados"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trashnochados/jaeger-nodejs"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
   }
 }
