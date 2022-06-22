@@ -32,7 +32,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install
       - run: |
-          echo @lexacode:https://npm.pkg.github.com/ > build/.npmrc
+          mkdir -p build
+          echo @trashnochados:https://npm.pkg.github.com/ > build/.npmrc
           echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
       - run: npm publish
         working-directory: ./build
