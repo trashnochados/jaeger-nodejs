@@ -31,7 +31,6 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm install
-      - run: npm run build
       - run: |
           echo @lexacode:https://npm.pkg.github.com/ > build/.npmrc
           echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
